@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore our range of premium Indian export products – spices, agricultural products, textiles, handicrafts & industrial goods. Bulk orders welcome.">
+    <title>Products – IndoGlobal Exports</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            border: 2px solid var(--mid-gray);
+            border-radius: var(--radius-full);
+            background: transparent;
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-body);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .product-listing-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(27, 42, 74, 0.06);
+            transition: all var(--transition-base);
+        }
+
+        .product-listing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-listing-img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .product-listing-card:hover .product-listing-img {
+            transform: scale(1.05);
+        }
+
+        .product-listing-img-wrap {
+            overflow: hidden;
+        }
+
+        .product-listing-body {
+            padding: 1.5rem;
+        }
+
+        .product-listing-category {
+            display: inline-block;
+            background: rgba(201, 168, 76, 0.1);
+            color: var(--gold-dark);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-listing-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-listing-desc {
+            font-size: 0.88rem;
+            color: var(--dark-gray);
+            margin-bottom: 1rem;
+        }
+
+        .product-listing-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: var(--dark-gray);
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .product-listing-actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body data-page="products">
+
+    <header class="header" id="main-header"></header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>Products</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Premium Indian Products for Global Markets</h2>
+                <p>Browse our extensive catalog of export-ready products sourced from certified manufacturers</p>
+            </div>
+
+            <!-- Filter -->
+            <div class="filter-bar fade-in">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="spices">Spices</button>
+                <button class="filter-btn" data-filter="agriculture">Agricultural</button>
+                <button class="filter-btn" data-filter="textiles">Textiles</button>
+                <button class="filter-btn" data-filter="handicrafts">Handicrafts</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-3 stagger-children">
+                <!-- Spices -->
+                <div class="product-listing-card fade-in" data-category="spices">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=500&q=80"
+                            alt="Turmeric Powder">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Spices</span>
+                        <h3 class="product-listing-title">Premium Turmeric Powder</h3>
+                        <p class="product-listing-desc">High curcumin content turmeric (5–7%) sourced from Erode, Tamil
+                            Nadu. Available in bulk packaging.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 1 Ton</span>
+                            <span>HS Code: 0910.30</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-card fade-in" data-category="spices">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1599909533601-aa1e3fb0d948?w=500&q=80"
+                            alt="Red Chili">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Spices</span>
+                        <h3 class="product-listing-title">Kashmiri Red Chili</h3>
+                        <p class="product-listing-desc">Deep red Kashmiri chili with rich color and mild heat, perfect
+                            for international food processing.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 500 Kg</span>
+                            <span>HS Code: 0904.21</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-card fade-in" data-category="spices">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1587131782738-de30ea91a542?w=500&q=80"
+                            alt="Cardamom">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Spices</span>
+                        <h3 class="product-listing-title">Green Cardamom</h3>
+                        <p class="product-listing-desc">Premium 8mm+ bold green cardamom from Kerala, rich aroma and
+                            essential oils content.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 200 Kg</span>
+                            <span>HS Code: 0908.31</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agriculture -->
+                <div class="product-listing-card fade-in" data-category="agriculture">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&q=80"
+                            alt="Basmati Rice">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Agriculture</span>
+                        <h3 class="product-listing-title">Basmati Rice 1121</h3>
+                        <p class="product-listing-desc">Premium extra-long grain basmati rice with exceptional aroma,
+                            aged for 2 years.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 5 Tons</span>
+                            <span>HS Code: 1006.30</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-card fade-in" data-category="agriculture">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1563746098251-d35aef196e83?w=500&q=80"
+                            alt="Alphonso Mangoes">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Agriculture</span>
+                        <h3 class="product-listing-title">Alphonso Mango Pulp</h3>
+                        <p class="product-listing-desc">100% natural Alphonso mango pulp, no preservatives, FSSAI
+                            certified for food safety.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 1 Ton</span>
+                            <span>HS Code: 2007.99</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textiles -->
+                <div class="product-listing-card fade-in" data-category="textiles">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=500&q=80"
+                            alt="Cotton Fabrics">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Textiles</span>
+                        <h3 class="product-listing-title">Organic Cotton Fabric</h3>
+                        <p class="product-listing-desc">GOTS certified organic cotton fabric, plain and printed
+                            varieties, multiple GSM options.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 3000 Meters</span>
+                            <span>HS Code: 5208.11</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-card fade-in" data-category="textiles">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=500&q=80"
+                            alt="Silk Fabrics">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Textiles</span>
+                        <h3 class="product-listing-title">Banarasi Silk Fabric</h3>
+                        <p class="product-listing-desc">Handwoven Banarasi silk with intricate gold and silver zari
+                            work, ideal for premium fashion.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 500 Meters</span>
+                            <span>HS Code: 5007.20</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Handicrafts -->
+                <div class="product-listing-card fade-in" data-category="handicrafts">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=500&q=80"
+                            alt="Handicrafts">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Handicrafts</span>
+                        <h3 class="product-listing-title">Brass Decorative Items</h3>
+                        <p class="product-listing-desc">Hand-crafted brass figurines, candle holders, and decorative
+                            pieces from Moradabad.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 100 Pieces</span>
+                            <span>HS Code: 7419.99</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Industrial -->
+                <div class="product-listing-card fade-in" data-category="industrial">
+                    <div class="product-listing-img-wrap">
+                        <img class="product-listing-img"
+                            src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=500&q=80"
+                            alt="Industrial Parts">
+                    </div>
+                    <div class="product-listing-body">
+                        <span class="product-listing-category">Industrial</span>
+                        <h3 class="product-listing-title">Stainless Steel Fasteners</h3>
+                        <p class="product-listing-desc">High-grade SS304/SS316 fasteners, bolts, and nuts for
+                            construction and manufacturing.</p>
+                        <div class="product-listing-meta">
+                            <span>MOQ: 5 Tons</span>
+                            <span>HS Code: 7318.15</span>
+                        </div>
+                        <div class="product-listing-actions">
+                            <a href="product-detail.html" class="btn btn-sm btn-outline">View Details</a>
+                            <a href="quote.html" class="btn btn-sm btn-primary">Get Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2 class="fade-in">Can't Find What You're Looking For?</h2>
+            <p class="fade-in">We source 500+ products from India. Tell us your requirement and we'll find the right
+                product for you.</p>
+            <a href="quote.html" class="btn btn-primary btn-lg fade-in">Send Your Requirement →</a>
+        </div>
+    </section>
+
+    <footer class="footer" id="main-footer"></footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
